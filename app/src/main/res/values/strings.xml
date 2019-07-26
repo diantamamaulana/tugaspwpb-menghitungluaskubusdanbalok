@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">menghitung bangun ruang</string>
+    <string name="hitung_luas_kubus">hitung luas kubus</string>
+    <string name="hitung_luas_balok">hitung luas balok</string>
+    <string name="masukan_sisi">Masukan sisi</string>
+    <string name="masukan_p_l">Masukan p.l</string>
+    <string name="masukan_p_t">masukan p.t</string>
+    <string name="masukan_l_t">masukan l.t</string>
+</resources>
