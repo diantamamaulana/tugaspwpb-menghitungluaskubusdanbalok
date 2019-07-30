@@ -1,5 +1,7 @@
 package space.diantama.menghitungbangunruang;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class KubusActivity extends AppCompatActivity implements View.OnClickListener {
-
+    int req_code = 1;
     private EditText eSisi;
     private Button eHitung;
     private TextView eTothasil;
@@ -27,16 +29,22 @@ public class KubusActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public void onClick(View view) {
+        Intent data = new Intent();
         if (view.getId()== R.id.hitungkubus) {
             String ss = eSisi.getText().toString().trim();
             String hitung = eHitung.getText().toString().trim();
-            String total = eTothasil.getText().toString().trim();
+//            String total = eTothasil.getText().toString().trim();
 
             Double dss = toDouble(ss);
             Double dhitung = toDouble(hitung);
-            Double dtotal = 6*(dss*dss);
+            Double dtotal = 6 * (dss * dss);
 
-            eTothasil.setText(String.valueOf(dtotal));
+            data.setData(Uri.parse(String.valueOf(dtotal)));
+            setResult(RESULT_OK, data);
+            finish();
+
+//            eTothasil.setText(String.valueOf(dtotal));
+
         }
 
     }

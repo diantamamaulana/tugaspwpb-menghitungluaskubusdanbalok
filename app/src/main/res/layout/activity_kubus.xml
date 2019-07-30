@@ -26,12 +26,5 @@
         android:id="@+id/hitungkubus"
         android:text="Hitung"/>
 
-    <TextView
-        android:paddingTop="8dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="24dp"
-        android:id="@+id/tothasil"
-        android:textStyle="bold"/>
 
 </LinearLayout>
